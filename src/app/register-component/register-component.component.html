@@ -1,0 +1,41 @@
+<app-free-bar></app-free-bar>
+
+
+<div class="formContainer">
+<h3>Register</h3>
+    <form [formGroup] = "userForm" (submit) = "register()">
+        <p class="exists" *ngIf = "exists">*username already exists in database. Please choose a different username.</p>
+        <label for = 'Fullname'>Enter your Full Name:</label>
+        <input class = 'name' type = 'text' name = 'Fullname`' formControlName = 'FullName'><br>
+
+        <label for = 'Username'>Enter desired Username:</label>
+        <input class = 'un' type = 'text' name = 'Username' formControlName = 'Username'>
+        <br>
+
+        <label for = 'Password'>Enter desired Password:</label>
+        <input type = 'password'  class = 'pass' name = 'password' formControlName = 'Password'>
+        <br>
+
+        <label for = 'Age'>Enter Age:</label>
+        <input type = 'number' class = 'age' name = 'Age' formControlName = 'Age'>
+        <br>
+
+        <label for = 'Gender'>Choose Gender:</label>
+        <select name="Gender" id="gender" class = 'gender' formControlName = "Gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+            
+          </select>
+        <br>
+
+        
+
+        <input type = "submit" value = "Register" class = "btn btn-primary">
+    </form>
+<br>
+    <p>Already a registered User?</p>
+    <button class = 'btn btn-success' routerLink = "">Login</button>
+
+
+</div>

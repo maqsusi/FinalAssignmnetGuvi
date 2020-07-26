@@ -1,0 +1,26 @@
+<app-free-bar></app-free-bar>
+
+<div class="formContainer">
+    <h3>Login</h3>
+    <form [formGroup] = "userForm" (submit) = "userLogin()">
+        <p *ngIf = "invalid" class = "invalid">*User not registered. Please register first.</p>
+        <p *ngIf = "incorrect" class = "incorrect">*Incorrect Credentials. Please check your password and try again.</p>
+        <label for = 'username'>Enter Username:</label>
+        <input  class = 'shift' type = 'text' name = 'username' formControlName = 'Username'><br>
+
+        <label for = 'password'>Enter Password:</label>
+        <input class = 'passshift' type = 'password' name = 'password' formControlName = 'Password'>
+        <br><br>
+
+        
+        <div class = 'button1'>
+        <input type = "submit" value = "Login" class = "btn btn-primary">
+    </div>
+    </form>
+    <br>
+
+    <label class = 'text'>Not a registerd User? Sign up now!</label><br>
+    <button routerLink = '/register' class = 'btn btn-success'>Go to SignUp</button>
+
+
+</div>

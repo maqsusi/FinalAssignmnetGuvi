@@ -1,0 +1,21 @@
+<app-options-bar></app-options-bar>
+
+
+
+<div class="container">
+    <table class = "table table-striped">
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Artist Name
+            </th>
+        </tr>
+        <tr *ngFor = "let artist of artists; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{artist.artistName}}</td>
+            <td><button class = 'btn-success btn' (click) = 'followArtist(artist.id)'>Follow</button></td>
+        </tr>
+    </table>
+</div>

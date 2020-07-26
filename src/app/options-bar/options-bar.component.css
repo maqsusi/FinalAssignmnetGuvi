@@ -1,0 +1,19 @@
+p
+{
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.container
+{   
+    margin-top: 1%;
+    display: inline-block;
+    width: 100%;
+
+}
+
+button
+{
+    float: right;
+    margin: 50px;
+}

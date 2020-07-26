@@ -1,0 +1,46 @@
+<app-options-bar></app-options-bar>
+
+
+
+
+<div class="tableContainer">
+    <table class="table table-striped table1">
+
+        <tr>
+
+            <th>Song Name</th>
+
+            <th>Artist Name</th>
+
+
+        </tr>
+
+        <tr *ngFor="let song of songs">
+
+            <td>{{song.songName}}</td>
+
+            <td>{{song.artistName}}</td>
+
+            <td><button class = 'btn btn-primary' (click) = "newMessage(song.songPath)">Play</button></td>
+
+            <td>
+                <form [formGroup]="playlistForm" (submit) = "addSong(song.songId)">
+                    <select name='playlists' class='dropdown' formControlName = "playlistId">
+                        
+                        <option *ngFor="let list of playlists" value="{{list.playlistId}}" >{{list.playlist}}</option>
+                    </select>
+                    <input type='submit' value="Add" class='btn btn-success'>
+
+
+                </form>
+
+            </td>
+
+
+
+
+
+
+        </tr>
+    </table>
+</div>

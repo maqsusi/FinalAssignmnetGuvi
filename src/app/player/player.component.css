@@ -1,0 +1,19 @@
+.navbar
+{
+    bottom: 0;
+    position: fixed;
+    background-color:#333;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.navbar > p
+{
+    color: white;
+}
+
+audio
+{
+    margin: auto;
+}

@@ -1,0 +1,26 @@
+table
+{
+    width: 100%;
+}
+
+
+.playlistDiv
+{
+    margin-left: 10px;
+}
+
+.formDiv
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+label
+{
+    margin-right: 5px;
+}
+
+.btn-primary
+{
+    margin-left: 5px;
+}
