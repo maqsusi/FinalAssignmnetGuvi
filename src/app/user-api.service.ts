@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -9,69 +9,56 @@ export class UserApiService {
 
   constructor(private http: HttpClient) { }
 
-  registerUser(request):Observable<any>
-  {
-      return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/register", request);
+  registerUser(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/register", request);
   }
 
-  userLogin(request) : Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/login", request);
+  userLogin(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/login", request);
   }
 
-  showSongs(): Observable<any>
-  {
-    return this.http.get("http://akshat-assignment.azurewebsites.net/api/users/showsongs");
+  showSongs(): Observable<any> {
+    return this.http.get("https://akshat-assignment.azurewebsites.net/api/users/showsongs");
   }
 
-  showUserPlaylists(request): Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/userplaylist", request)
+  showUserPlaylists(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/userplaylist", request)
   }
 
-  showPlaylistSongs(request): Observable <any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/songsinplaylist", request)
+  showPlaylistSongs(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/songsinplaylist", request)
   }
 
-  addSongToPl(request):Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/addsongtoplaylist", request);
+  addSongToPl(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/addsongtoplaylist", request);
   }
 
-  removeSongFromPl(request) : Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/RemoveSongFromPL", request);
-  }  
-
-  followedArtists(request) : Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/YourArtists", request);
+  removeSongFromPl(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/RemoveSongFromPL", request);
   }
 
-  unfollowArtist(request):Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/UnfollowArtist", request);
+  followedArtists(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/YourArtists", request);
   }
 
-  showArtists(): Observable<any>
-  {
-    return this.http.get("http://akshat-assignment.azurewebsites.net/api/admin/artists");
+  unfollowArtist(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/UnfollowArtist", request);
   }
 
-  followArtist(request):Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/FollowArtist", request);
+  showArtists(): Observable<any> {
+    return this.http.get("https://akshat-assignment.azurewebsites.net/api/admin/artists");
   }
 
-  createPlaylist(request): Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/AddPlaylist", request);
+  followArtist(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/FollowArtist", request);
   }
 
-  getUserInfo(request): Observable<any>
-  {
-    return this.http.post("http://akshat-assignment.azurewebsites.net/api/users/UserInfo", request);
+  createPlaylist(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/AddPlaylist", request);
+  }
+
+  getUserInfo(request): Observable<any> {
+    return this.http.post("https://akshat-assignment.azurewebsites.net/api/users/UserInfo", request);
   }
 
 }
