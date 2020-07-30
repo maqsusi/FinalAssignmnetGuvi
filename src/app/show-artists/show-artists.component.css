@@ -1,0 +1,18 @@
+.all
+{
+    color: white;
+    background-image: url('./register-bg.jpg');
+    
+}
+
+th, td
+{
+    color: white;
+    border: none;
+    
+}
+
+.table
+{
+    border: none;
+}

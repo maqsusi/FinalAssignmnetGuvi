@@ -1,4 +1,32 @@
 .container
 {
     display: inline-block;
+    margin-left: 20%;
+    
+}
+
+.all
+{
+    background-image: url('./dj.jpg');
+    height: 1020px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+}
+
+TH, td
+{
+    color: white;
+    border: none;
+}
+
+.table
+{
+    border: none;
+}
+
+p
+{
+    color: black;
 }

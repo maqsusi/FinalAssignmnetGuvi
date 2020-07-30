@@ -1,25 +1,26 @@
+<div class="all">
 <app-options-bar></app-options-bar>
 
 
 
-<div class="container">
-    Follow Artists from the <a routerLink = '/artists'>View All Artists</a> tab.
-    <table class = "table table-striped">
-        <tr>
-            <th>#</th>
-            <th>Artist Name</th>
-        </tr>
-        <tr *ngFor = "let artist of artists; let i = index">
-            
-            <td>
-                {{i+1}}
-            </td>
-            <td>
-                {{artist.artistName}}
-            </td>
-            <td><button class = 'btn-warning' (click) = "unfollowArtist(artist.id)">Unfollow</button></td>
-        </tr>
-    </table>
+    <div class="container">
+        <p>Follow Artists from the <a routerLink='/artists'>View All Artists</a> tab.</p>
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Artist Name</th>
+            </tr>
+            <tr *ngFor="let artist of artists; let i = index">
 
+                <td>
+                    {{i+1}}
+                </td>
+                <td>
+                    {{artist.artistName}}
+                </td>
+                <td><button class='btn-warning btn' (click)="unfollowArtist(artist.id)">Unfollow</button></td>
+            </tr>
+        </table>
+    </div>
 
 </div>
